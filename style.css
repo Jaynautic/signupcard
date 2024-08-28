@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
 }
 
 body {
@@ -12,188 +12,152 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 40px;
-    background-color: darkgreen;
-}
-
-.title{
-    color: #fff;
-}
-
-.buttonContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 10px;
-}
-
-.hit-button {
-    width: 120px;
-    text-align: center;
-    padding: 10px 0px;
-    border-radius: 8px;
-    border: 2px solid black;
     background-color: white;
-    font-size: 18px;
-    font-weight: 800;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.hitButton:hover {
-    transform: scale(1.1)
-}
-
-#refreshButton {
-    position: absolute;
-    left: 50%;
-    margin-left:-60px;
-    visibility: hidden;
 }
 
 .card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    /* width: 56vh;
-    height: 40vh; */
-    /* min-width: 435px; */
-    /* min-height: 287px;
-    max-height: 372px; */
+    gap: 0px;
+    box-shadow: 4px 10px 20px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .card {
     position: relative;
-    width: 266px;
-    height: 372px;
-    /* width: 100%;
-    height: 100%; */
+    width: 348px;
+    height: 432px;
     perspective: 1000px;
 }
 
 .card-inner {
-    position: absolute;
-    width: 100%;
-    /* min-width: 435px; */
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.dealer-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    gap: 40px;
-}
-
-.dealer-card {
-    position: relative;
-    width: 133px;
-    height: 186px;
-    perspective: 1000px;
-}
-
-.dealer-card-inner {
     position: absolute;
     width: 100%;
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
+    background-color: white;
+    border-radius: 15px 0px 0px 15px;
+    gap: 24px;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
 }
 
-.card-front, .card-back {
+.side-card-inner {
+    display: flex;
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
-    background: no-repeat url("./images/cardback.png");
-    background-size: contain;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    background-image: linear-gradient(to bottom left, #F2360D, #EE6B21);
+    border-radius: 0px 15px 15px 0px;
 }
 
-.dealer-card-front, .dealer-card-back {
-    position: absolute;
+.signup-side {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.signup-button {
+    margin: auto;
+    border-radius: 16px;
+    border: 1px solid white;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 8px 38px;
+    color: white;
+}
+
+.signin-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+h1 {
+    color: black;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.social-button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #DADADA;
+    border-radius: 18px;
+}
+
+.signin-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+h3 {
+    margin: auto;
+    color: black;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.signin-input-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    gap: 16px;
+}
+
+.input-field {
+    background-color: #EAEAEA;
     width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: no-repeat url("./images/cardback.png");
-    background-size: contain;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #636363
 }
 
-.card-back {
-    transform: rotateY(-180deg);
+.signin-submit {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.dealer-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(-180deg);
-}
-
-#cardfacea {
-    background: no-repeat url("./images/cardfronta.png");
-    background-size: contain;
-}
-
-#cardface2 {
-    background: no-repeat url("./images/cardfront2.png");
-    background-size: contain;
-}
-
-#cardface3 {
-    background: no-repeat url("./images/cardfront3.png");
-    background-size: contain;
-}
-
-#cardface4 {
-    background: no-repeat url("./images/cardfront4.png");
-    background-size: contain;
-}
-
-#cardface5 {
-    background: no-repeat url("./images/cardfront5.png");
-    background-size: contain;
-}
-
-#cardface6 {
-    background: no-repeat url("./images/cardfront6.png");
-    background-size: contain;
-}
-
-#cardface7 {
-    background: no-repeat url("./images/cardfront7.png");
-    background-size: contain;
-}
-
-#cardface8 {
-    background: no-repeat url("./images/cardfront8.png");
-    background-size: contain;
-}
-
-#cardface9 {
-    background: no-repeat url("./images/cardfront9.png");
-    background-size: contain;
-}
-
-#cardface10 {
-    background: no-repeat url("./images/cardfront10.png");
-    background-size: contain;
-}
-
-#cardfacej {
-    background: no-repeat url("./images/cardfrontj.png");
-    background-size: contain;
-}
-
-#cardfaceq {
-    background: no-repeat url("./images/cardfrontq.png");
-    background-size: contain;
-}
-
-#cardfacek {
-    background: no-repeat url("./images/cardfrontk.png");
-    background-size: contain;
+.signin-button {
+    margin: auto;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 8px 38px;
+    color: white;
+    background-image: linear-gradient(to bottom left, #F2360D, #EE6B21);
 }
