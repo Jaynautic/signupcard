@@ -12,33 +12,67 @@
   <body>
     <div class="card-container" id="cardContainer">
       <div class="card" id="card1">
-        <div class="card-inner" id="cardinner1">
+        <div class="card-inner" id="cardInner1">
           <div class="signin-title">
             <h1>Sign In</h1>
             <div class="social-button-container">
-              <div class="social-button"></div>
-              <div class="social-button"></div>
-              <div class="social-button"></div>
+              <div class="social-button">
+                <img src="/images/googlelogo.png" alt="GoogleLogo" width="20" height="20">
+              </div>
+              <div class="social-button">
+                <img src="/images/facebooklogo.png" alt="GoogleLogo" width="20" height="20">
+              </div>
+              <div class="social-button">
+                <img src="/images/linkedinlogo.png" alt="GoogleLogo" width="20" height="20">
+              </div>
             </div>
           </div>
           <div class="signin-input">
-            <h3>or use your account</h3>
+            <h3 id="inputTitleTag">or use your account</h3>
             <div class="signin-input-fields">
-              <div class="input-field" id="emailInput">Email or Username</div>
-              <div class="input-field" id="passwordInput">Password</div>
+              <input type="text" class="input-field" id="emailInput" placeholder="Email or Username"></input>
+              <input type="text" class="input-field" id="passwordInput" placeholder="Password"></input>
             </div>
           </div>
           <div class="signin-submit">
-            <h3>Forgot Password? Click here</h3>
+            <h3 id="forgotPassword">Forgot Password? Click here</h3>
             <div class="signin-button" id="signinButton">Sign In</div>
           </div>
         </div>
       </div>
-      <div class="card" id="card1">
-        <div class="side-card-inner" id="cardinner1">
+        <div class="card" id="card2">
+          <div class="card-inner" id="cardInner2">
+            <div class="signin-title">
+              <h1>Create Account</h1>
+              <div class="social-button-container">
+                <div class="social-button">
+                  <img src="/images/googlelogo.png" alt="GoogleLogo" width="20" height="20">
+                </div>
+                <div class="social-button">
+                  <img src="/images/facebooklogo.png" alt="GoogleLogo" width="20" height="20">
+                </div>
+                <div class="social-button">
+                  <img src="/images/linkedinlogo.png" alt="GoogleLogo" width="20" height="20">
+                </div>
+              </div>
+            </div>
+            <div class="signin-input">
+              <h3 id="inputTitleTag">or use your email</h3>
+              <div class="signin-input-fields">
+                <input type="text" class="input-field" id="usernameInput" placeholder="Username"></input>
+                <input type="text" class="input-field" id="emailInput" placeholder="Email or Username"></input>
+                <input type="text" class="input-field" id="passwordInput" placeholder="Password"></input>
+              </div>
+            </div>
+            <div class="signin-submit">
+              <div class="signup-button" id="signupButton">Sign Up</div>
+            </div>
+          </div>
+      <div class="side-card" id="cardSide">
+        <div class="side-card-inner" id="sidecardinner">
           <div class="signup-side">
-            <h2>New to us?</h2>
-            <div class="signup-button" id="signupSideButton">Sign Up</div>
+            <h2 id="sideTitle">New to us?</h2>
+            <div class="signup-side-button" id="signupSideButton">Sign Up</div>
           </div>
         </div>
       </div>
