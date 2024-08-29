@@ -29,23 +29,43 @@ body {
     transform-style: preserve-3d;
 }
 
-.card-container.move {
-    flex-direction: row-reverse;
-}
-
 .card {
     position: relative;
     width: 348px;
     height: 432px;
-    /* perspective: 1000px; */
 }
 
-.side-card-inner.move {
-    transform: translateX(-348px);
+.side-card {
+    position: relative;
+    width: 348px;
+    height: 432px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+#cardSide {
+    position: absolute;
+}
+
+.side-card-inner.move1 {
     border-radius: 15px 0px 0px 15px;
+    background-image: linear-gradient(to bottom left, #0D40F2, #2173EE);
 }
 
-.card-inner {
+.side-card-inner.move2 {
+    border-radius: 0px 15px 15px 0px;
+    background-image: linear-gradient(to bottom left, #F2360D, #EE6B21);
+}
+
+.side-card.move1 {
+    transform: translateX(-348px);
+}
+
+.side-card.move2 {
+    transform: translateX(0px);
+}
+
+#cardInner1 {
     display: flex;
     position: absolute;
     width: 100%;
@@ -61,6 +81,22 @@ body {
     justify-content: center;
 }
 
+#cardInner2 {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+    gap: 24px;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
 .side-card-inner {
     display: flex;
     position: absolute;
@@ -68,8 +104,8 @@ body {
     height: 100%;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    background-image: linear-gradient(to bottom left, #F2360D, #EE6B21);
     border-radius: 0px 15px 15px 0px;
+    background-image: linear-gradient(to bottom left, #F2360D, #EE6B21);
 }
 
 .signup-side {
@@ -87,7 +123,7 @@ h2 {
     font-weight: 600;
 }
 
-.signup-button {
+.signup-side-button {
     margin: auto;
     border-radius: 16px;
     border: 1px solid white;
@@ -120,10 +156,14 @@ h1 {
 }
 
 .social-button {
+    display: flex;
     width: 36px;
     height: 36px;
     border: 1px solid #DADADA;
     border-radius: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .signin-input {
@@ -155,7 +195,8 @@ h3 {
     border-radius: 5px;
     font-size: 12px;
     font-weight: 400;
-    color: #636363
+    color: #636363;
+    border: none;
 }
 
 .signin-submit {
@@ -173,5 +214,17 @@ h3 {
     padding: 8px 38px;
     color: white;
     background-image: linear-gradient(to bottom left, #F2360D, #EE6B21);
+    cursor: pointer;
+}
+
+.signup-button {
+    margin: auto;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    padding: 8px 38px;
+    color: white;
+    background-image: linear-gradient(to bottom left, #0D40F2, #2173EE);
     cursor: pointer;
 }
